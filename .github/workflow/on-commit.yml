@@ -1,6 +1,6 @@
 name: On commit
 
-on: 
+on:
   push:
     branches:
       - dev
@@ -13,12 +13,12 @@ jobs:
     
     steps:
       - name: Checkout e troca de branch 
-      - uses: actions/checkout@v4
+        uses: actions/checkout@v4
         with: 
           ref: ${{ github.event.ref }}
        
       - name: Setup ambiente python 
-      - uses: actions/setup-python@v5
+        uses: actions/setup-python@v5
         with: 
           python-version: 3.9 
 
@@ -29,4 +29,3 @@ jobs:
 
       - name: Executando testes
         run: pytest
-
