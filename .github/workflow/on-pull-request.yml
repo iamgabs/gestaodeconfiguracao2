@@ -12,20 +12,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout e troca de branch 
-      uses: actions/checkout@v4
-      with:
-        ref: ${{ github.event.pull_request.head.ref }}
+      - name: Checkout e troca de branch 
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
 
-    - name: Setup ambiente python 
-      uses: actions/setup-python@v5
-      with:
-        python-version: 3.9
+      - name: Setup ambiente python 
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.9
 
-    - name: Instalando dependencias 
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
+      - name: Instalando dependencias 
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
-    - name: Executando testes
-      run: pytest
+      - name: Executando testes
+        run: pytest
