@@ -6,7 +6,7 @@ from typing import Generator
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 @pytest.fixture
-def client() -> typing.Generator:
+def client() -> Generator:
     with app.test_client() as client:
         yield client
 
