@@ -16,10 +16,13 @@ source ./venv/bin/activate
 pip install -r requirements.txt 
 
 # entrar em src
-cd ./src
+cd /app/src
 
 # executar o app
-flask --app ./app.py run
+FLASK_APP=app.py FLASK_RUN_HOST=0.0.0.0 FLASK_RUN_PORT=5000 flask run
+
+# na vm1 executar
+curl http://192.168.56.11:5000/products
 ~~~
 
 
