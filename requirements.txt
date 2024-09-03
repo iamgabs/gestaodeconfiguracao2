@@ -1,6 +1,6 @@
 blinker==1.5
 click==8.0.4
-colorama==0.4.6
+colorama==0.4.5
 Flask==3.0.2
 iniconfig==2.0.0
 itsdangerous==2.1.2
